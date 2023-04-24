@@ -37,7 +37,7 @@ class HomeViewController: UIViewController {
     @objc func startSpeech() {
         
         let url = URL(string: "https://shortstories-api.onrender.com")!
-        LocalService().downloadStories(url: url) { serviceStoryModel in
+        NetworkManager().downloadStories(url: url) { serviceStoryModel in
             self.storyModel = serviceStoryModel
         }
         

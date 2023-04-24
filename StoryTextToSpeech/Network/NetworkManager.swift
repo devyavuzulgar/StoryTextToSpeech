@@ -8,7 +8,9 @@
 import Foundation
 
 
-struct LocalService {
+struct NetworkManager {
+    
+    static let shared = NetworkManager()
     // Download a random story
     func downloadStories(url: URL, completion: @escaping (StoryModel?) -> ()) {
         
